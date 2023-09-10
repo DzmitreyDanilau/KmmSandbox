@@ -4,25 +4,92 @@ compose = "1.5.1"
 compose-bom = "2023.09.00"
 compose-activity = "1.7.2"
 kotlin = "1.9.0"
-coroutines = "1.7.3"
+kotlinx-coroutines = "1.7.3"
 decompose = "2.1.0-beta-01"
+koin-android = "3.4.3"
+koin-android-extensions = "3.0.2"
+koin-core = "3.4.3"
+ktor = "2.3.2"
+agp = "8.0.0"
+androidx-appcompat = "1.6.1"
+androidx-activityCompose = "1.7.2"
+compose-uitooling = "1.5.1"
+composeImageLoader = "1.3.1"
+kotlinx-serialization = "1.5.0"
+kotlinx-datetime = "0.4.0"
 
 [libraries]
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-activityCompose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+
 androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "material" }
 androidx-compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 androidx-compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity" }
+androidx-compose-uitooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose-uitooling" }
 compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose" }
-decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
 
-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+coil-compose = "io.coil-kt:coil-compose:2.4.0"
+composeImageLoader = { module = "io.github.qdsfdhvh:image-loader", version.ref = "composeImageLoader" }
+
+decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
+decompose-compose-jetbrains = { module = "com.arkivanov.decompose:extensions-compose-jetbrains", version.ref = "decompose" }
+decompose-compose-jetpack = { module = "com.arkivanov.decompose:extensions-compose-jetpack", version.ref = "decompose" }
+
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin-core" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin-android" }
+koin-android-extensions = { group = "io.insert-koin", name = "koin-android-ext", version.ref = "koin-android-extensions" }
+
+ktor-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-contentnegotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serialization", version.ref = "ktor" }
+ktor-serialization = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-android = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
+ktor-android-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-ios = { group = "io.ktor", name = "ktor-client-ios", version.ref = "ktor" }
 
 [bundles]
 compose = [
     "androidx-compose-material",
     "androidx-compose-foundation",
     "androidx-compose-ui",
-    "compose-components-resources"
+    "compose-components-resources",
+    "androidx-compose-uitooling"
+]
+
+koinAndroid = [
+    "koin-android",
+    "koin-core",
+]
+
+koinCommon = [
+    "koin-core"
+]
+
+ktorAndroid = [
+    "ktor-android",
+    "ktor-android-okhttp"
+]
+
+ktorCommon = [
+    "ktor-core",
+    "ktor-logging",
+    "ktor-client-serialization",
+    "ktor-contentnegotiation",
+    "ktor-serialization"
+]
+
+ktorIos = [
+    "ktor-ios"
 ]
 
 [plugins]
+multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

@@ -12,6 +12,8 @@
 		1F915C7AE31274A7E9FD73D4 /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECFD8A17E38D8E465BFE846 /* Pods_iosApp.framework */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		5AD0EB2F2AADBE9F002E0191 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0EB2E2AADBE9F002E0191 /* ComposeView.swift */; };
+		5AF54B962AADF4BD00ED676D /* ArtistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF54B952AADF4BD00ED676D /* ArtistsView.swift */; };
+		5AF54B992AADF65600ED676D /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF54B982AADF65600ED676D /* AlbumsView.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +23,8 @@
 		1D9AA7405D6175856B5B47DE /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		5AD0EB2E2AADBE9F002E0191 /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
+		5AF54B952AADF4BD00ED676D /* ArtistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsView.swift; sourceTree = "<group>"; };
+		5AF54B982AADF65600ED676D /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +52,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5AF54B942AADF4A500ED676D /* artists */ = {
+			isa = PBXGroup;
+			children = (
+				5AF54B952AADF4BD00ED676D /* ArtistsView.swift */,
+			);
+			path = artists;
+			sourceTree = "<group>";
+		};
+		5AF54B972AADF64A00ED676D /* albums */ = {
+			isa = PBXGroup;
+			children = (
+				5AF54B982AADF65600ED676D /* AlbumsView.swift */,
+			);
+			path = albums;
+			sourceTree = "<group>";
+		};
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +89,8 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				5AF54B972AADF64A00ED676D /* albums */,
+				5AF54B942AADF4A500ED676D /* artists */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
@@ -229,8 +251,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD0EB2F2AADBE9F002E0191 /* ComposeView.swift in Sources */,
+				5AF54B962AADF4BD00ED676D /* ArtistsView.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				5AF54B992AADF65600ED676D /* AlbumsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
