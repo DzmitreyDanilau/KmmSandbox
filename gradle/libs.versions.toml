@@ -1,0 +1,28 @@
+[versions]
+material = "1.5.1"
+compose = "1.5.1"
+compose-bom = "2023.09.00"
+compose-activity = "1.7.2"
+kotlin = "1.9.0"
+coroutines = "1.7.3"
+decompose = "2.1.0-beta-01"
+
+[libraries]
+androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "material" }
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+androidx-compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose" }
+decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
+
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+
+[bundles]
+compose = [
+    "androidx-compose-material",
+    "androidx-compose-foundation",
+    "androidx-compose-ui",
+    "compose-components-resources"
+]
+
+[plugins]
